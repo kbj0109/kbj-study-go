@@ -7,4 +7,11 @@
 
 다만 아무리 많은 고루틴이 생성되어 있어도, main 함수가 종료되면 모든 고루틴은 종료된다.
 
+
+var wg sync.WaitGroup  // syng 패키지의 WaitGroup 객체 생성
+
+wg.Add(1)               // 고루틴 1개 추가
+wg.Done()               // 고루틴 종료
+wg.Wait()               // 모든 고루틴이 종료될 때까지 대기
+
 */ 
